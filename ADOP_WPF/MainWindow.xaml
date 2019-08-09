@@ -1,0 +1,26 @@
+﻿<Window x:Class="ADOP_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADOP_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="552" Width="999" Closed="APOD_WPF_Close">
+    <Grid Margin="0,0,2,2">
+        <DatePicker x:Name="MonthCalender" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="185" SelectedDateChanged="MonthCalendar_SelectedDateChanged"/>
+        <Button x:Name="LaunchButton" Content="Go to APOD date" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="185" Click="LaunchButton_Click"/>
+        <GroupBox Header="Settings" HorizontalAlignment="Left" Height="110" Margin="10,85,0,0" VerticalAlignment="Top" Width="190"/>
+        <CheckBox x:Name="ShowTodaysImageCheckbox" Content="Show today's image on start up" HorizontalAlignment="Left" Margin="12,115,0,0" VerticalAlignment="Top" Width="188" Height="20"/>
+        <CheckBox x:Name="LimitRangeCheckBox" Content="limit range to current year" HorizontalAlignment="Left" Margin="12,140,0,0" VerticalAlignment="Top" Checked="LimitRangeCheckBox_Checked"/>
+        <Label Content="images downloaded today:" HorizontalAlignment="Left" Margin="12,160,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ImagesTodayTextBox" HorizontalAlignment="Left" Height="23" Margin="165,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30" RenderTransformOrigin="-1.333,1.304" Background="#FFFFFFC0" IsReadOnly="True"/>
+        <Label Content="Image Credit and Copyright:" HorizontalAlignment="Left" Margin="12,239,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ImageCopyrightTextbox" HorizontalAlignment="Left" Height="50" Margin="12,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" IsReadOnly="True" Background="#FFFFFFC0"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="12,364,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Height="104" Margin="12,405,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="967" IsReadOnly="True" Background="#FFFFFFC0"/>
+        <Border x:Name="PictureBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="380" Margin="205,10,0,0" VerticalAlignment="Top" Width="774">
+            <Image x:Name="ImagePictureBox" Margin="0,0,0,-1"/>
+        </Border>
+
+    </Grid>
+</Window>
